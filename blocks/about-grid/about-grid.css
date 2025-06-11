@@ -1,0 +1,14 @@
+.about-grid > div{
+display: flex;
+gap: 40px;
+}
+
+.about-grid > div *:first-child {
+flex: 0 0 70%;
+max-width: 100%;
+}
+
+.about-grid > div *:last-child {
+flex: 0 0 30%;
+max-width: 100%;
+}
