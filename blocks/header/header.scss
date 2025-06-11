@@ -4,11 +4,7 @@ $background-color_1: #8e44ad;
 $background-color_2: var(--background-color);
 $background-color_3: var(--light-color);
 
-/* header and nav layout */
-/* hamburger */
-/* brand */
-/* sections */
-/* tools */
+
 header {
 	.nav-wrapper {
 		background-color: $background-color_1;
@@ -16,6 +12,7 @@ header {
 		z-index: 2;
 		position: fixed;
 	}
+
 	nav {
 		box-sizing: border-box;
 		display: grid;
@@ -27,20 +24,24 @@ header {
 		height: var(--nav-height);
 		padding: 0 24px;
 		font-family: $font-family_1;
+
 		p {
 			margin: 0;
 			line-height: 1;
 		}
+
 		a {
 			&:any-link {
 				color: $color_1;
 			}
 		}
+
 		.nav-hamburger {
 			grid-area: hamburger;
 			height: 22px;
 			display: flex;
 			align-items: center;
+
 			button {
 				height: 22px;
 				margin: 0;
@@ -54,11 +55,13 @@ header {
 				white-space: initial;
 			}
 		}
+
 		.nav-hamburger-icon {
 			box-sizing: border-box;
 			display: block;
 			position: relative;
 			width: 20px;
+
 			&::before {
 				box-sizing: border-box;
 				display: block;
@@ -68,6 +71,7 @@ header {
 				position: absolute;
 				background: currentcolor;
 			}
+
 			&::after {
 				box-sizing: border-box;
 				display: block;
@@ -84,19 +88,24 @@ header {
 				height: auto;
 			}
 		}
+
 		.nav-sections {
 			grid-area: sections;
 			flex: 1 1 auto;
 			display: none;
 			visibility: hidden;
+
 			ul {
 				list-style: none;
 				padding-left: 0;
 				font-size: var(--body-font-size-s);
+
 				>li {
 					font-weight: 500;
+
 					>ul {
 						margin-top: 0;
+
 						>li {
 							font-weight: 400;
 						}
@@ -112,8 +121,10 @@ header {
 		grid-template: 'hamburger brand' var(--nav-height) 'sections sections' 1fr 'tools tools' var(--nav-height) / auto 1fr;
 		overflow-y: auto;
 		min-height: 100dvh;
+
 		.nav-hamburger-icon {
 			height: 22px;
+      
 			&::before {
 				top: 3px;
 				left: 1px;
@@ -123,6 +134,7 @@ header {
 				height: 2px;
 				border-radius: 2px;
 			}
+
 			&::after {
 				top: 3px;
 				left: 1px;
@@ -136,23 +148,27 @@ header {
 				transform: rotate(-45deg);
 			}
 		}
+
 		.nav-sections {
 			display: block;
 			visibility: visible;
 			align-self: start;
 		}
 	}
+
 	nav[aria-expanded='false'] {
 		.nav-hamburger-icon {
 			height: 2px;
 			border-radius: 2px;
 			background: currentcolor;
+
 			&::before {
 				height: 2px;
 				border-radius: 2px;
 				background: currentcolor;
 				top: -6px;
 			}
+
 			&::after {
 				height: 2px;
 				border-radius: 2px;
@@ -161,6 +177,7 @@ header {
 			}
 		}
 	}
+
 	.nav-brand {
 		grid-area: brand;
 		flex-basis: 150px;
@@ -177,18 +194,22 @@ header {
 			gap: 0 32px;
 			max-width: 1264px;
 			padding: 0 32px;
+
 			.nav-hamburger {
 				display: none;
 				visibility: hidden;
 			}
+
 			.nav-sections {
 				display: block;
 				visibility: visible;
 				white-space: nowrap;
+
 				.nav-drop {
 					position: relative;
 					padding-right: 16px;
 					cursor: pointer;
+
 					&::after {
 						content: '';
 						display: inline-block;
@@ -210,17 +231,20 @@ header {
 						transform: rotate(315deg);
 					}
 				}
+
 				ul {
 					display: flex;
 					gap: 24px;
 					margin: 0;
 				}
+
 				.default-content-wrapper {
 					>ul {
 						>li {
 							flex: 0 1 auto;
 							position: relative;
 							color: $color_1;
+
 							>ul {
 								display: none;
 								position: relative;
@@ -235,11 +259,13 @@ header {
 									border-right: 8px solid transparent;
 									border-bottom: 8px solid var(--light-color);
 								}
+
 								>li {
 									padding: 8px 0;
 								}
 							}
 						}
+
 						>li[aria-expanded='true'] {
 							>ul {
 								display: block;
@@ -256,6 +282,7 @@ header {
 				}
 			}
 		}
+
 		nav[aria-expanded='true'] {
 			min-height: 0;
 			overflow: visible;
@@ -264,4 +291,4 @@ header {
 			}
 		}
 	}
-}
+} 
