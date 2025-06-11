@@ -5,7 +5,7 @@
   "description": "Starter project for Adobe Helix",
   "scripts": {
     "lint:js": "eslint .",
-    "lint:css": "stylelint \"blocks/**/*.css\" \"styles/*.css\"",
+    "lint:css": "stylelint \"blocks/**/*.{css,scss}\" \"styles/**/*.{css,scss}\"",
     "lint": "npm run lint:js && npm run lint:css",
     "lint:fix": "npm run lint:js -- --fix && npm run lint:css -- --fix"
   },
@@ -24,7 +24,17 @@
     "eslint": "8.57.1",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-plugin-import": "2.31.0",
-    "stylelint": "16.20.0",
-    "stylelint-config-standard": "38.0.0"
+    "gulp": "^5.0.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "path": "^0.12.7",
+    "postcss": "^8.5.4",
+    "postcss-prettify": "^0.3.4",
+    "sass": "^1.89.2",
+    "stylelint": "^16.20.0",
+    "stylelint-config-standard": "38.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-scss": "^6.12.1",
+    "through2": "^4.0.2"
   }
 }
